@@ -10,7 +10,7 @@ import BookingPage from './pages/BookingPage.jsx';
 function App() {
   const [user, setUser] = useState(null);
   const navigate = useNavigate();
-
+ 
   useEffect(() => {
     const session = supabase.auth.getSession().then(({ data }) => {
       setUser(data.session?.user ?? null);
